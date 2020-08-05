@@ -2,39 +2,39 @@ import gallery from "./gallery-items.js";
 // ===================================================creatingList===========================================
 const listGalleryRef = document.querySelector(".js-gallery");
 
-// let addItemGallery = (elOriginal, elSrc, elAlt) => {
-//   listGalleryRef.insertAdjacentHTML(
-//     "beforeend",
-//     `<li class="gallery__item"><a class="gallery__link" href="${elOriginal}"><img class="gallery__image" src="${elSrc}" data-source="${elOriginal}" alt="${elAlt}"></a></li>`
-//   );
-// };
-
-// gallery.map((obj) =>
-//   addItemGallery(obj.original, obj.preview, obj.description)
-// );
-
-// ----------------------------------------------------variant 2--------------------
 let addItemGallery = (elOriginal, elSrc, elAlt) => {
-  let item = document.createElement("li");
-  let link = document.createElement("a");
-  let img = document.createElement("img");
-  link.setAttribute("href", elOriginal);
-  img.setAttribute("src", elSrc);
-  img.setAttribute("data-source", elOriginal);
-  img.setAttribute("alt", elAlt);
-  item.classList.add("gallery__item");
-  link.classList.add("gallery__link");
-  img.classList.add("gallery__image");
-  item.append(link);
-  link.append(img);
-
-  return item;
+  listGalleryRef.insertAdjacentHTML(
+    "beforeend",
+    `<li class="gallery__item"><a class="gallery__link" href="${elOriginal}"><img class="gallery__image" src="${elSrc}" data-source="${elOriginal}" alt="${elAlt}"></a></li>`
+  );
 };
-const items = gallery.map((obj) =>
+
+gallery.map((obj) =>
   addItemGallery(obj.original, obj.preview, obj.description)
 );
 
-listGalleryRef.append(...items);
+// ----------------------------------------------------variant 2--------------------
+// let addItemGallery = (elOriginal, elSrc, elAlt) => {
+//   let item = document.createElement("li");
+//   let link = document.createElement("a");
+//   let img = document.createElement("img");
+//   link.setAttribute("href", elOriginal);
+//   img.setAttribute("src", elSrc);
+//   img.setAttribute("data-source", elOriginal);
+//   img.setAttribute("alt", elAlt);
+//   item.classList.add("gallery__item");
+//   link.classList.add("gallery__link");
+//   img.classList.add("gallery__image");
+//   item.append(link);
+//   link.append(img);
+
+//   return item;
+// };
+// const items = gallery.map((obj) =>
+//   addItemGallery(obj.original, obj.preview, obj.description)
+// );
+
+// listGalleryRef.append(...items);
 // =================================================GalleryClick======================================
 const lightBoxImage = document.querySelector(".lightbox__image");
 
