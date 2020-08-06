@@ -15,9 +15,9 @@ export default [
   },
   {
     preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785__340.jpg",
+      "https://pixabay.com/get/57e9dd404a4faa0df7c5997cc2213179153ed9e052_640.jpg",
     original:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785_1280.jpg",
+      "https://pixabay.com/get/57e9dd404a4fad00f5d89960c62d3e78123fdfe25557_1920.jpg",
     description: "Aerial Beach View",
   },
   {
